@@ -1,29 +1,25 @@
-import React, { useState } from "react";
-import { database, storage } from "./firebase/firebase.config";
-import { getDatabase, ref, onValue } from "firebase/database";
+import React from "react";
+import LoadData from "./components/LoadData/LoadData";
+import LoadImages from "./components/LoadImages/LoadImages";
+
+import { storage } from "./firebase/firebase.config";
+import { listAll, getDownloadURL, getMetadata } from "firebase/storage";
+
+import { ref } from "firebase/storage";
+import { useState } from "react";
 import { useEffect } from "react";
-import { listAll } from "firebase/storage";
-const db = getDatabase();
+import Home from "./Home/Home";
 
 const App = () => {
-    const [data, setData] = useState([]);
-    const [imageList, setImageList] = useState([]);
+    return (
+        <div>
+            {/* <img src={imageData} alt="" />
+            <LoadData imageData={imageData} />
 
-    const dbRef = ref(db);
-    const storageRef = ref(storage);
-    console.log(data);
-    useEffect(() => {
-        listAll(storageRef).then((res) => {
-            console.log(res);
-        });
-        const unsubscribe = onValue(dbRef, (snapshot) => {
-            setData(snapshot.val());
-        });
-
-        return () => unsubscribe();
-    }, []);
-
-    return <div></div>;
+            <LoadImages imageData={imageData} /> */}
+            <Home />
+        </div>
+    );
 };
 
 export default App;

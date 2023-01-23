@@ -1,0 +1,35 @@
+.box__container {
+    height: 90vh;
+    padding: 1rem;
+    border: 3px solid var(--footer);
+    overflow-y: scroll;
+    border-radius: 3px;
+}
+
+.box {
+    width: 400px;
+    height: 100px;
+    background-color: var(--footer);
+    padding: 0.5rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+.box .info__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box .p__bottom {
+    margin-top: 3rem;
+}
+
+.active {
+    background: var(--dark);
+    color: white;
+}
+
+img {
+    width: 300px;
+    border-radius: 5px;
+}

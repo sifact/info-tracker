@@ -1,0 +1,10 @@
+.person__details {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.bottom__space {
+    margin-bottom: 1rem;
+}
