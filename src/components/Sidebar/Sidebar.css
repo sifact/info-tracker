@@ -1,0 +1,12 @@
+.section__sidebar {
+    height: calc(100vh - 67px);
+    width: 67px;
+    box-shadow: rgb(169 174 183 / 50%) 0px 1px 2px 0px;
+    background: var(--footer);
+}
+
+@media screen and (max-width: 1050px) {
+    .section__sidebar {
+        display: none;
+    }
+}

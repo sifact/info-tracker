@@ -1,11 +1,42 @@
 .box__container {
     height: 90vh;
-    padding: 1rem;
+    padding: 0.5rem;
     border: 3px solid var(--footer);
     overflow-y: scroll;
     border-radius: 3px;
+    width: 440px;
 }
 
+.date__picker {
+    height: 38px;
+    font-family: "Exo 2", sans-serif;
+    padding: 8px;
+    border-radius: 5px;
+}
+.show__gender {
+    display: none;
+}
+.Gender:hover {
+    display: inline;
+}
+.bottom__margin {
+    margin-bottom: 2rem;
+}
+
+.box__container option,
+select {
+    height: 2rem;
+    font-family: "Exo 2", sans-serif;
+}
+.select__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    font-size: 30px;
+    cursor: pointer;
+}
 .box {
     width: 400px;
     height: 100px;
@@ -13,6 +44,7 @@
     padding: 0.5rem;
     border-radius: 3px;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 .box .info__wrapper {
@@ -32,4 +64,14 @@
 img {
     width: 300px;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 576px) {
+    .box__container {
+        width: auto;
+    }
+
+    .box {
+        width: auto;
+    }
 }

@@ -16,8 +16,10 @@ const Home = () => {
             <Navbar />
             <div className="home">
                 <Sidebar />
-                <PeopleDetails person={person} />
-                <PeopleList handleClick={handleClick} />
+                <div className="people__info">
+                    <PeopleDetails person={person} />
+                    <PeopleList handleClick={handleClick} />
+                </div>
             </div>
         </section>
     );
